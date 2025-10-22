@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Meyve Toplama Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ana Menü -->
+  <div id="anaMenu">
+    <h1 id="oyunAdi">Melih Hallerde Oyna</h1>
+    <button id="oynaBtn">Oyna</button>
+    <button id="hazirlayanlarBtn">Emeği Geçenler</button>
+  </div>
+
+  <!-- Oyun Alanı -->
+<div id="oyun" style="display:none;">
+  <div id="karakter"></div>
+  <div id="puanBox">
+    <span id="puan">Puan: 0</span>
+  </div>
+
+  <!-- Bitiş ekranı -->
+  <div id="bitisEkrani" style="display:none;">
+    <button id="tekrar">Tekrar Oyna</button>
+    <button id="anaMenuBtn">Ana Menü</button>
+  </div>
+</div>
+
+<div id="canKutusu">
+  <img src="assets/kalp.png" class="kalp">
+  <img src="assets/kalp.png" class="kalp">
+  <img src="assets/kalp.png" class="kalp">
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
