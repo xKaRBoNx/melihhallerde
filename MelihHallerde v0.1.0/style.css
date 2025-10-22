@@ -1,0 +1,169 @@
+/* ===== Genel Ayarlar ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: url('assets/arkaplan.png') no-repeat center center/cover;
+  background-attachment: fixed; /* işte kritik satır */
+  overflow: hidden;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Ana Menü ===== */
+#anaMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  color: white;
+}
+
+#anaMenu h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+#anaMenu button {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  padding: 15px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  background: #ff6666;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#anaMenu button:hover {
+  background: #ff4444;
+  transform: scale(1.05);
+}
+
+/* ===== Oyun Alanı ===== */
+#oyun {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#canKutusu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.kalp {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* ===== Karakter ===== */
+#karakter {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background: url('assets/Karakter.png') no-repeat center/contain;
+  transition: left 0.3s ease-out;
+}
+
+/* ===== Meyveler ===== */
+.meyve {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ===== Puan Kutusu ===== */
+#puanBox {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  padding: 10px 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+#puan {
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* ===== Tekrar ve Ana Menü Butonları ===== */
+#anaMenuBtn {
+  display: none; /* Başlangıçta gizli */
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  padding: 12px 30px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ff6666;
+  color: white;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+#tekrar {
+  display: none; /* Başlangıçta gizli */
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  padding: 12px 30px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ff6666;
+  color: white;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+#tekrar:hover, #anaMenuBtn:hover {
+  background: #ff4444;
+  transform: scale(1.05);
+}
+
+
+#bitisEkrani {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7); /* işte karartı */
+  display: none; /* başta gizli */
+  z-index: 100; /* oyun üstünde olsun */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* butonlar arası boşluk */
+}
